@@ -23,7 +23,7 @@
 import UIKit.UIKitCore
 
 // https://easings.net
-public enum ALTimingFunction: String, CaseIterable, Hashable {
+public enum ALTimingFunction {
     case `default`
     case linear
     case easeIn

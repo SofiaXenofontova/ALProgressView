@@ -93,7 +93,7 @@ open class ALProgressRing: UIView {
 
     /// The radius of the ring.
     public var ringRadius: CGFloat {
-        var radius = min(bounds.height, bounds.width) / 2 - ringWidth / 2
+        var radius = min(bounds.height, bounds.width) / 2 - (ringWidth + 10)
         if ringWidth < grooveWidth {
             radius -= (grooveWidth - ringWidth) / 2
         }
@@ -102,7 +102,7 @@ open class ALProgressRing: UIView {
     
     /// The radius of the groove.
     public var grooveRadius: CGFloat {
-        var radius = min(bounds.height, bounds.width) / 2 - grooveWidth / 2
+        var radius = min(bounds.height, bounds.width) / 2 - (grooveWidth + 10)
         if grooveWidth < ringWidth {
             radius -= (ringWidth - grooveWidth) / 2
         }
@@ -212,7 +212,7 @@ open class ALProgressRing: UIView {
         gradientLayer.startPoint = CGPoint(x: 0.0, y: 0)
         gradientLayer.endPoint = CGPoint(x: 0.0, y: 1)
         
-        gradientLayer.shadowColor = startColor.cgColor
+      //  gradientLayer.shadowColor = startColor.cgColor
         gradientLayer.shadowOffset = .zero
     }
 
